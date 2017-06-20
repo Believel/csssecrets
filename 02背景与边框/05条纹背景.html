@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>条纹背景</title>
+  <style>
+  /* background-size */
+      .container{
+          margin: 100px 100px;
+          width: 200px;
+          height: 200px;
+          background: linear-gradient(#fb3 50%, #58a 50%);
+          background-size: 100% 30px;
+          /*1、设置背景图像的宽度 2、设置背景图像的高度，如果两个值只设置一个，则第二个会被设置为auto*/
+      }
+      .container1 {
+          margin: 200px 100px;
+          width: 200px;
+          height: 200px;
+          background:linear-gradient(to right , #fb3 30%, #58a 0);/* 或者90deg */
+          background-size: 30px 100%;
+      }
+      .container2 {
+          margin: 100px 200px;
+          width: 200px;
+          height: 200px;
+          background: linear-gradient(45deg,
+#fb3 25%, #58a 0, #58a 50%,
+#fb3 0, #fb3 75%, #58a 0);
+          background-size: 30px 30px;
+      }
+  </style>
+</head>
+<body>
+  <!-- 水平条纹 -->
+  <div class="container"></div>
+  <!-- 垂直条纹 -->
+  <div class="container1"></div>
+  <!-- 斜项条纹 -->
+  <div class="container2"></div>
+</body>
+</html>

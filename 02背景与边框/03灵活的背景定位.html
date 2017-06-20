@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>灵活的背景定位</title>
+  <style>
+      .container{
+          margin: 100px 100px;
+          padding: 10px;
+          width: 200px;
+          height: 200px;
+          background: url(../images/smile.png) no-repeat #58a;
+          background-position: right 20px bottom 10px;
+          /*默认情况下，background-position是以padding box为准的*/
+          /*background-origin: content-box;*/
+      }
+      .container1{
+            margin: 200px 100px;
+          padding: 10px;
+          width: 200px;
+          height: 200px;
+           background: url(../images/smile.png) no-repeat #58a;
+           background-position: calc(100% - 20px) calc(100% - 10px);
+           /*注意在 - 或者 + 的两侧各加一个空白符*/
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+        
+  </div>
+   <div class="container1">
+        
+  </div>
+</body>
+</html>

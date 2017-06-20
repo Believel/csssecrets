@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>半透明边框</title>
+  <style>
+      /*rgba() 和 hsla()*/
+      body{
+        background: #f7f7f7;
+      }
+      .container {
+          width: 200px;
+          height: 200px;
+          border : 10px solid hsla(0, 0%, 100%, .5);
+          background: white;
+          background-clip: padding-box;/* 默认是border-box    用现在的值修复边框半透明问题*/
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+      哈哈哈哈
+  </div>
+</body>
+</html>

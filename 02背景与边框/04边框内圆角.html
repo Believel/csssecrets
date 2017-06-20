@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>多重边框</title>
+  <style>
+      .container{
+          width: 200px;
+          height: 200px;
+          margin: 100px 100px;
+          background: #655;
+          padding: .8em;
+      }
+      .container > div{
+          background: tan;
+          border-radius: .8em;
+          padding: 1em;
+      }
+      .container1{
+          width: 200px;
+          height: 200px;
+          margin: 200px 100px;
+          border-radius: .8em;
+          background: tan;
+          padding: 1em;
+          box-shadow: 0 0 0 .6em #655;
+          outline: .6em solid #655;
+          /*描边并不会跟着元素的圆角走（因而显示出直角）*/
+      }
+  </style>
+</head>
+<body>
+<!-- 需求：需要一个容器，只有内侧有圆角，而边框或者描边的四个角在外部仍然保持直角的形状 -->
+<!-- 第一种方法：使用两个元素实现 -->
+  <div class="container">
+      <div>I have a nice subtle inner rounding don't I look pretty?</div>
+  </div>
+  <!-- 使用描边outline和box-shadow -->
+  <div class="container1"></div>
+</body>
+</html>

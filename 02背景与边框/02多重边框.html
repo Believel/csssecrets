@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>多重边框</title>
+  <style>
+     /*box-shadow*/
+      .container{
+          margin:100px 100px; 
+          width: 200px;
+          height: 200px;
+          background: yellowgreen;
+          box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0, 0, 0, .5);
+          /* 1、水平阴影位置(可以是负值) 2、 垂直阴影位置 3、模糊距离 4、扩张半径（阴影尺寸）5、阴影的颜色6、inset(内部阴影) 默认是: outset*/
+          /*注意是层层叠加的，第一层投影位于最顶层，一次类推。并且不会影响布局*/
+      }
+      .container1{
+           margin:200px 100px; 
+          width: 200px;
+          height: 200px;
+          background: yellowgreen;
+          border: 10px solid #655;
+          outline: 5px solid deeppink;/* 描边（添加真实的投影效果） */
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+        
+  </div>
+  <div class="container1">
+      如果只需要两层边框
+  </div>
+</body>
+</html>
