@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>平行四边形</title>
+  <style>
+  /*有没有办法只让容器的形状倾斜，而保持其内容不变呢*/
+      .container{
+        margin-left: 100px;
+          width: 200px;
+          height: 200px;
+          background: #fb3;
+          transform: skewX(-45deg);
+      }
+      .button {width: 100px;height: 50px;background: #def;display: block;line-height: 50px;text-align: center; transform: skewX(-45deg); }
+      .button > div { transform: skewX(45deg); }
+      .btn{
+        margin-top: 50px;
+        position: relative;
+     
+        width: 100px;height: 50px;background: #58a;display: block;line-height: 50px;text-align: center;
+      }
+      .btn::before{
+
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: #58a;
+        transform: skew(45deg);
+      }
+  </style>
+</head>
+<body>
+  <!-- 解决方案1： 嵌套内容 -->
+  <a href="#yolo" class="button">
+    <div>Click me</div>
+  </a>
+ <!-- 解决方案2：伪元素法 -->
+ <a href="#" class="btn">
+   click me
+ </a>
+  <!-- 平行四边形 -->
+  <div class="container">
+        
+  </div>
+</body>
+</html>
